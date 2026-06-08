@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvion Engineering Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7f9fc;
+    color: #1f2d3d;
+    line-height: 1.6;
+}
+
+/* General */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    height: 210px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav ul li {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #1f2d3d;
+    text-decoration: none;
+
+    font-family:'Montserrat',sans-serif;
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:0.5px;
+
+    transition:0.3s ease;
+}
+
+nav ul li a.active {
+    color: #00b4d8;
+    border-bottom: 2px solid #00b4d8;
+    padding-bottom: 3px;
+}
+
+nav ul li a:hover {
+    color: #4cc9f0;
+}
+
+/* Hero Section */
+
+.slider{
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+
+.slides{
+    display:flex;
+    width:300%;
+    height:100%;
+    animation:slideShow 15s infinite;
+}
+
+.slide{
+    width:33.333%;
+    height:100%;
+    flex-shrink:0;
+    background-size:cover;
+    background-position:center;
+}
+
+.slide1{
+    background-image:url("slide 1.png");
+}
+
+.slide2{
+    background-image:url("slide 2.png");
+}
+
+.slide3{
+    background-image:url("slide 3.png");
+}
+
+@keyframes slideShow{
+
+    0%,30%{
+        transform:translateX(0);
+    }
+
+    33%,63%{
+        transform:translateX(-33.33%);
+    }
+
+    66%,96%{
+        transform:translateX(-66.66%);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+}
+
+.hero-text h1{
+    font-family:'Montserrat',sans-serif;
+    font-size:clamp(42px,5vw,72px);
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:20px;
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#f5f5f5;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:12px 28px;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:50px;
+    margin-bottom:35px;
+
+    font-family:'Montserrat',sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    backdrop-filter:blur(8px);
+}
+
+.hero-text .btn{
+    margin-top:10px;
+}
+
+.slider::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(5,25,45,.25);
+    z-index:1;
+    pointer-events:none;
+}
+
+.slide{
+    width:33.333%;
+    height:100%;
+    flex-shrink:0;
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-text{
+    position:relative;
+    text-align:center;
+    width:90%;
+    max-width:900px;
+    z-index:2;
+    pointer-events:auto;
+}
+
+.hero-text h1{
+    color:#ffffff;
+    text-shadow:0 3px 20px rgba(0,0,0,0.4);
+}
+
+.hero-text p{
+    color:#e2e8f0;
+    text-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-tag{
+    color:#7dd3fc;
+}
+
+.hero-text *{
+    opacity:1;
+}
+.btn{
+    display:inline-block;
+    background:linear-gradient(135deg,#0077b6,#00b4d8);
+    color:white;
+
+    padding:16px 34px;
+    border-radius:10px;
+
+    font-family:'Montserrat',sans-serif;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    text-decoration:none;
+    transition:.3s;
+    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(10px);
+}
+
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.why-us{
+    padding:80px 5%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.why-us h2{
+    font-size:36px;
+    color:#0a2540;
+    margin-bottom:50px;
+    font-weight:800;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.why-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+    border-top:4px solid #0077b6;
+}
+.why-card i{
+    font-size:40px;
+    color:#0077b6;
+    margin-bottom:20px;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.why-card h3{
+    color:#0077b6;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.why-card p{
+    color:#555;
+    font-size:15px;
+    line-height:1.7;
+}
+
+.stats{
+    padding:80px 5%;
+    background:
+    linear-gradient(rgba(10,37,64,.9),
+    rgba(10,37,64,.9)),
+    url("images/stats-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat-box{
+    color:white;
+    padding:25px;
+}
+
+.stat-box h2{
+    font-size:50px;
+    color:#00b4d8;
+    margin-bottom:10px;
+    font-weight:800;
+}
+
+.stat-box p{
+    font-size:18px;
+    color:#e6e6e6;
+}
+
+/* Products Section */
+
+.product-list-section{
+    background:#f8fafc;;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.product-list-section h2{
+    color:#0A2540;;
+    font-size:42px;
+    font-weight:800;
+    margin-bottom:50px;
+}
+
+.product-category{
+    max-width:900px;
+    margin:0 auto 50px;
+    border-top:5px solid #ffffff;
+    padding-top:30px;
+}
+
+.product-category h3{
+    color:#0A2540;;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.product-category ul{
+    list-style:none;
+    padding:0;
+}
+
+.product-category li{
+    font-size:22px;
+    color:#555;
+    margin:18px 0;
+    transition:.3s;
+}
+
+.product-category li:hover{
+    color:#006b4f;
+    transform:translateX(5px);
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #eaf1f7;
+}
+
+.about h2 {
+    font-size: 34px;
+    color: #0a2540;
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.about h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #00b4d8;
+    border-radius: 2px;
+}
+
+.about p {
+    max-width: 760px;
+    margin: 25px auto 0;
+    color: #586779;
+    font-size: 16px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 34px;
+    color: #0a2540;
+    margin-bottom: 14px;
+}
+
+.contact p {
+    color: #586779;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+    background: #f8fbfd;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px rgba(10, 37, 64, 0.06);
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 14px 16px;
+    display: block;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: #ffffff;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #0077b6;
+}
+
+.contact textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.contact button:hover {
+    background: linear-gradient(135deg, #023e8a, #0096c7);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer-cta{
+    background:#00b4d8;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer-cta h2{
+    color:white;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.footer-cta .btn{
+    background:white;
+    color:#0a2540;
+}
+
+.footer{
+    background:#0a2540;
+    color:white;
+    padding-top:60px;
+}
+
+.footer-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer-logo{
+    height:70px;
+    margin-bottom:20px;
+}
+
+.footer-col h3{
+    margin-bottom:20px;
+    color:#00b4d8;
+    font-size:22px;
+}
+
+.footer-col p{
+    color:#d6dce5;
+    line-height:1.8;
+}
+
+.footer-col ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-col ul li{
+    margin-bottom:12px;
+}
+
+.footer-col ul li a{
+    color:#d6dce5;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-col ul li a:hover{
+    color:#00b4d8;
+}
+
+.social-icons{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,0.1);
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    background:#00b4d8;
+    transform:translateY(-3px);
+}
+
+.social-icons i{
+    font-size:18px;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:1px solid rgba(255,255,255,0.15);
+    color:#c9d3df;
+    grid-column:1/-1;
+}
+
+
+/* Responsive */
+.menu-toggle{
+    display:none;
+}
+@media (max-width:768px){
+
+    header .container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-direction:row;
+        gap:0;
+    }
+
+    .logo-box{
+        height:auto;
+    }
+
+    .logo{
+        height:55px;
+        width:auto;
+        margin-right:0;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        cursor:pointer;
+        color:#0A2540;
+    }
+
+    nav{
+        position:fixed;
+        top:0;
+        right:-280px;
+        width:280px;
+        height:100vh;
+        background:#0A2540;
+        transition:.4s;
+        z-index:9999;
+    }
+
+    nav.active{
+        right:0;
+    }
+
+    nav ul{
+        flex-direction:column;
+        margin-top:100px;
+        gap:25px;
+    }
+
+    nav ul li a{
+        color:white;
+        font-size:18px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 72vh;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .about,
+    .contact {
+        padding: 60px 15px;
+    }
+
+    .about h2,
+    .contact h2,
+    .products h2 {
+        font-size: 28px;
+    }
+
+    .logo {
+        height: 46px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p,
+    .about p,
+    .contact p {
+        font-size: 14px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .contact form {
+        padding: 20px 16px;
+    }
+}
+
+@media(max-width:768px){
+
+    .why-us h2,
+    .stats h2{
+        font-size:28px;
+}
+
+    .stat-box h2{
+        font-size:38px;
+    }
+
+    .stat-box p{
+        font-size:16px;
+    }
+}
+@media(min-width:992px){
+
+    .product-list-section{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+    .product-list-section h2{
+    grid-column:1/-1;
+}
+
+    .product-category{
+    border-top:none;
+}
+
+}
+@media(max-width:768px){
+
+    .product-list-section{
+    padding:60px 15px;
+}
+
+    .product-list-section h2{
+    font-size:34px;
+}
+
+    .product-category h3{
+    font-size:24px;
+}
+
+    .product-category li{
+    font-size:18px;
+    margin:14px 0;
+    }
+}
+
+@media(max-width:768px){
+
+    .footer{
+        text-align:center;
+    }
+
+    .footer-logo{
+        margin:auto auto 20px;
+    }
+
+    .footer-col{
+        margin-bottom:20px;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <div class="logo-box">
+            <img src="elvion logo.svg" alt="Elvion Logo" class="logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<div class="slider">
+
+    <div class="slides">
+
+        <!-- Slide 1 -->
+        <div class="slide slide1">
+
+            <div class="hero-text">
+                <span class="hero-tag">
+                    PHARMACEUTICAL VALVES
+                </span>
+
+                <h1>
+                    Precision Flow Control For Pharma Industries
+                </h1>
+
+                <p>
+                    High purity SS316L valves engineered for sterile,
+                    contamination-free pharmaceutical applications.
+                </p>
+
+                <a href="products.html" class="btn" target="_blank">
+                    Explore Products
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide slide2">
+
+            <div class="hero-text">
+                <span class="hero-tag">
+                    AUTOMATION SOLUTIONS
+                </span>
+
+                <h1>
+                    Smart Valve Automation Systems
+                </h1>
+
+                <p>
+                    Reliable pneumatic actuators, positioners and
+                    automation accessories for process industries.
+                </p>
+
+                <a href="products.html" class="btn" target="_blank">
+                    View Solutions
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide slide3">
+
+            <div class="hero-text">
+                <span class="hero-tag">
+                    HYGIENIC FITTINGS
+                </span>
+
+                <h1>
+                    Premium Sanitary Fittings & Components
+                </h1>
+
+                <p>
+                    Designed for pharmaceutical, food, dairy and biotech
+                    applications with superior hygienic standards.
+                </p>
+
+                <a href="products.html" class="btn" target="_blank">
+                    Browse Products
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<section class="why-us">
+
+    <h2>Why Choose Elvion</h2>
+
+        
+        <div class="why-card">
+            <i class="fas fa-gem"></i>
+            <h3>Pharma Grade Finish</h3>
+            <p>Mirror polished SS316L valves with superior hygienic standards for pharmaceutical applications.</p>
+        </div>
+        
+        <div class="why-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Leak Proof Design</h3>
+            <p>Precision engineered sealing system ensuring reliable performance in critical processes.</p>
+        </div>
+        
+        <div class="why-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Custom Engineering</h3>
+            <p>Tailor-made valve and automation solutions designed to match specific process requirements.</p>
+        </div>
+        
+        <div class="why-card">
+            <i class="fas fa-check-circle"></i>
+            <h3>100% Quality Tested</h3>
+            <p>Every product undergoes strict quality inspection before dispatch.</p>
+        </div>
+
+</section>
+
+
+<!-- Products Section -->
+
+<section class="product-list-section">
+
+    <h2>PRODUCTS</h2>
+
+    <div class="product-category">
+
+        <h3>Valve</h3>
+
+        <ul>
+            <li>FSG Glass Valve</li>
+            <li>FSS Ball Valve</li>
+            <li>Pharma Weld Valve</li>
+            <li>TC Steel Ball Valve</li>
+            <li>Sampling Valve</li>
+            <li>Butterfly Valve</li>
+        </ul>
+
+    </div>
+
+    <div class="product-category">
+
+        <h3>Automation Accessories</h3>
+
+        <ul>
+            <li>Pneumatic Actuator</li>
+            <li>Limit Switch</li>
+            <li>Solenoid Valve</li>
+            <li>Positioner</li>
+            <li>Air Filter Regulator</li>
+        </ul>
+
+    </div>
+
+    <div class="product-category">
+
+        <h3>Hygienic Fittings</h3>
+
+        <ul>
+            <li>Tri Clover Clamp</li>
+            <li>SMS Union</li>
+            <li>Ferrule</li>
+            <li>Gaskets</li>
+            <li>Sight Glass</li>
+            <li>Air Header</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2>About Elvion</h2>
+    <p>
+        Elvion Engineering Solutions specializes in manufacturing and supplying premium stainless steel valves, hygienic fittings, and automation
+        components for Pharmaceutical, Food, Dairy, Biotech, and Process Industries. Our commitment to quality, precision engineering, and
+        customer satisfaction makes us a trusted industry partner.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+
+<section class="footer-cta">
+    <h2>Looking For Reliable Valve Solutions?</h2>
+    <a href="#contact" class="btn">Get A Quote</a>
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="elvion logo.svg" class="footer-logo">
+
+            <p>We provides premium stainless steel valves and hygienic fittings for Pharmaceutical, Food & Process Industries.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html" class="active">Home </a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Products</h3>
+
+            <ul>
+                <li>FSG Glass Valve</li>
+                <li>FSS Ball Valve</li>
+                <li>Pharma Weld Valve</li>
+                <li>TC Ball Valve</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+    <h3>Contact Us</h3>
+
+    <p>📍 Suez farm, Plot No.64-108, Behrampura, Ahmedabad, Gujarat, India 380022</p>
+    <p>📞 +91  92747 33166</p>
+    <p>✉ info@elvion.com</p>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/elvionengineeringsolution/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://facebook.com/yourusername" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://linkedin.com/company/yourcompany" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+
+    </div>
+</div>
+<div class="footer-bottom">
+    © 2026 Elvion Engineering Solutions. All Rights Reserved.
+</div>
+</footer>
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+const icon = menuToggle.querySelector("i");
+
+menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+
+    if(nav.classList.contains("active")){
+        icon.classList.replace("fa-bars","fa-times");
+    }else{
+        icon.classList.replace("fa-times","fa-bars");
+    }
+});
+</script>
+
+</body>
+</html>
