@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Elvion Engineering Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7f9fc;
+    color: #1f2d3d;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background: white;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    height: 210px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav ul li a {
+    color: #1f2d3d;
+    text-decoration: none;
+
+    font-family:'Montserrat',sans-serif;
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:0.5px;
+
+    transition:0.3s ease;
+}
+
+nav ul li a.active {
+    color: #00b4d8;
+    border-bottom: 2px solid #00b4d8;
+    padding-bottom: 3px;
+}
+
+nav ul li a:hover {
+    color: #4cc9f0;
+}
+
+.about-hero {
+    background: linear-gradient(135deg, #0a2540, #1b3a57);
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero-overlay {
+    width: 100%;
+}
+
+.about-hero-content {
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    display: block;
+}
+.about-hero-content .hero-tag{
+    display:inline-block;
+    padding:10px 24px;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:50px;
+
+    color:#7dd3fc;
+
+    font-family:'Montserrat',sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+}
+.about-hero-content h1 {
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size: 52px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.line {
+    width: 70px;
+    height: 3px;
+    background: #00b4d8;
+    margin: 15px auto 20px;
+}
+
+.about-hero-content p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 7px 16px;
+    background: #e8f5fb;
+    color: #0077b6;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size: 34px;
+    color: #0a2540;
+    margin-top: 10px;
+}
+
+.about-section {
+    background: #f7f9fc;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.about-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: #0a2540;
+    margin-bottom: 18px;
+    line-height: 1.25;
+}
+
+.about-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #586779;
+    margin-bottom: 14px;
+}
+
+.about-box {
+    background: #ffffff;
+    padding: 28px 24px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px rgba(10, 37, 64, 0.06);
+}
+
+.about-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #0a2540;
+    margin-bottom: 16px;
+}
+
+.about-box ul {
+    padding-left: 18px;
+}
+
+.about-box ul li {
+    margin-bottom: 12px;
+    color: #425466;
+    font-size: 15px;
+}
+
+.mission-vision {
+    background: #ffffff;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.mv-card {
+    background: #f9fbfd;
+    border: 1px solid #e6edf4;
+    border-radius: 16px;
+    padding: 30px 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
+}
+.mv-card i{
+    font-size:40px;
+    color:#00b4d8;
+    margin-bottom:20px;
+}
+.mv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(10, 37, 64, 0.1);
+}
+
+.mv-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #0a2540;
+    margin-bottom: 14px;
+}
+
+.mv-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #586779;
+}
+
+.why-choose {
+    background: #f3f7fb;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.choose-card {
+    background: #ffffff;
+    padding: 28px 22px;
+    border-radius: 16px;
+    border-top: 4px solid #00b4d8;
+    box-shadow: 0 8px 22px rgba(10, 37, 64, 0.05);
+    transition: 0.3s ease;
+}
+
+.choose-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(10, 37, 64, 0.1);
+}
+
+.choose-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #0a2540;
+    margin-bottom: 12px;
+}
+
+.choose-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #586779;
+}
+
+.footer-cta{
+    background:#00b4d8;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer-cta h2{
+    color:white;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.footer-cta .btn{
+    background:white;
+    color:#0a2540;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 28px;
+    background:white;
+    color:#0a2540;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.footer{
+    background:#0a2540;
+    color:white;
+    padding-top:60px;
+}
+
+.footer-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer-logo{
+    height: 110px;
+    margin-bottom:20px;
+}
+
+.footer-col h3{
+    margin-bottom:20px;
+    color:#00b4d8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.footer-col p{
+    color:#d6dce5;
+}
+
+.footer-col ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-col ul li{
+    margin-bottom:12px;
+}
+
+.footer-col ul li a{
+    color:#d6dce5;
+    text-decoration:none;
+}
+
+.footer-col ul li a:hover{
+    color:#00b4d8;
+}
+
+.social-icons{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:40px;
+    height:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(255,255,255,0.1);
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    background:#00b4d8;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:1px solid rgba(255,255,255,0.15);
+}
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mv-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .choose-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-hero-content h1 {
+        font-size: 40px;
+    }
+}
+
+.menu-toggle{
+    display:none;
+}
+
+@media (max-width:768px){
+
+    header .container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-direction:row;
+        gap:0;
+    }
+
+    .logo-box{
+        height:auto;
+    }
+
+    .logo{
+        height:55px;
+        width:auto;
+        margin-right:0;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        cursor:pointer;
+        color:#0A2540;
+    }
+
+    nav{
+        position:fixed;
+        top:0;
+        right:-280px;
+        width:280px;
+        height:100vh;
+        background:#0A2540;
+        transition:.4s;
+        z-index:9999;
+    }
+
+    nav.active{
+        right:0;
+    }
+
+    nav ul{
+        flex-direction:column;
+        margin-top:100px;
+        gap:25px;
+    }
+
+    nav ul li a{
+        color:white;
+        font-size:18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 46px;
+    }
+
+    .about-hero {
+        min-height: 320px;
+    }
+
+    .about-hero-content {
+        padding: 60px 0;
+    }
+
+    .about-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .about-hero-content p {
+        font-size: 15px;
+    }
+
+    .about-text h2,
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .mv-grid,
+    .choose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    .about-box,
+    .mv-card,
+    .choose-card {
+        padding: 24px 18px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .about-hero-content h1 {
+        font-size: 24px;
+    }
+
+    .about-text p,
+    .mv-card p,
+    .choose-card p,
+    .about-box ul li {
+        font-size: 14px;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .footer{
+        text-align:center;
+    }
+
+    .footer-logo{
+        margin:auto auto 20px;
+    }
+
+    .footer-col{
+        margin-bottom:20px;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-box">
+                <img src="elvion logo.svg" alt="Elvion Logo" class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="about-hero-overlay">
+            <div class="container about-hero-content">
+                <span class="hero-tag">
+                    ABOUT ELVION
+                </span>
+
+                <h1>Engineering Excellence For Hygienic Industries</h1>
+                <div class="line"></div>
+                <p>
+                    Trusted manufacturer of hygienic, sanitary and pharmaceutical valve solutions
+                    designed for clean, safe and efficient process systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Intro -->
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <span class="section-tag">Who We Are</span>
+                <h2>Your Trusted Partner In Pharmaceutical Flow Control Solutions</h2>
+                <p>
+                    Elvion Engineering Solutions is focused on delivering high-quality
+                    sanitary and pharmaceutical valve solutions for industries where
+                    hygiene, precision and reliability are critical.
+                </p>
+                <p>
+                    We serve pharmaceutical, biotech, food processing, dairy and other
+                    process industries with products manufactured to support clean flow
+                    control, easy maintenance and dependable performance.
+                </p>
+            </div>
+
+            <div class="about-box">
+                <h3>Core Expertise</h3>
+                <ul>
+                    <li>Sanitary valve manufacturing</li>
+                    <li>Pharma process solutions</li>
+                    <li>Hygienic stainless steel components</li>
+                    <li>Reliable quality and performance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision -->
+    <section class="mission-vision">
+        <div class="container mv-grid">
+            <div class="mv-card">
+                <h3>Our Mission</h3>
+                <i class="fas fa-bullseye"></i>
+                <p>
+                    To provide trusted hygienic valve solutions that improve safety,
+                    efficiency and product purity in modern process industries.
+                </p>
+    
+            </div>
+
+            <div class="mv-card">
+                <h3>Our Vision</h3>
+                <i class="fas fa-eye"></i>
+                <p>
+                    To become a leading name in sanitary and pharmaceutical flow
+                    control solutions through quality, innovation and customer trust.
+                </p>
+            </div>
+
+            <div class="mv-card">
+                <h3>Our Values</h3>
+                <i class="fas fa-handshake"></i>
+                <p>
+                    Quality, integrity, precision, customer commitment and continuous
+                    improvement are the foundation of our work.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-tag">Why Choose Us</span>
+                <h2>Why Industries Trust Elvion</h2>
+            </div>
+
+            <div class="choose-grid">
+                <div class="choose-card">
+                    <h3>Pharma Grade Design</h3>
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Products designed for clean and contamination-sensitive applications.</p>
+                </div>
+
+                <div class="choose-card">
+                    <h3>Premium SS316L Materials</h3>
+                    <i class="fas fa-gem"></i>
+                    <p>Built using durable stainless steel materials suitable for sanitary use.</p>
+                </div>
+
+                <div class="choose-card">
+                    <h3>Industry-Specific Solutions</h3>
+                    <i class="fas fa-cogs"></i>
+                    <p>Solutions tailored for pharma, biotech, food and beverage industries.</p>
+                </div>
+
+                <div class="choose-card">
+                    <h3>Proven Reliability</h3>
+                    <i class="fas fa-check-circle"></i>
+                    <p>Engineered for smooth flow control, safety and long service life.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="elvion logo.svg" class="footer-logo">
+
+            <p>
+                We provides premium stainless steel valves and hygienic fittings for Pharmaceutical, Food & Process Industries.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Products</h3>
+
+            <ul>
+                <li>Ball Valve</li> 
+                <li>Sanitary Butterfly Valve</li>
+                <li>Sanitary Control Valves</li>
+                <li>Segmented Type Bottom Valve</li>
+                <li>Angle Type Flush Bottom Valve</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+
+            <p>📍 Suez farm, Plot No.64-108, Behrampura, Ahmedabad, Gujarat, India 380022</p>
+            <p>📞 +91 92747 33166</p>
+            <p>✉ teamelviong@gmail.com</p>
+
+            <div class="social-icons">
+
+                <a href="https://www.instagram.com/elvionengineeringsolution/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Elvion Engineering Solutions. All Rights Reserved.
+    </div>
+
+</footer>
+
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+const icon = menuToggle.querySelector("i");
+
+menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+
+    if(nav.classList.contains("active")){
+        icon.classList.replace("fa-bars","fa-times");
+    }else{
+        icon.classList.replace("fa-times","fa-bars");
+    }
+});
+</script>
+
+</body>
+</html>
